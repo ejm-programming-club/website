@@ -17,10 +17,11 @@ class PythonCodeConsole extends Component {
                 <br/>
                 <span className="keyWord">while True</span>:<br/>
                 {'    '}now <span className="functionName">=</span> datetime.datetime.now()<br/>
-                {'    '}sys.stdout.write(  <span className="comment"># clears the screen; print() does not do so</span><br/>
+                {'    '}<span className="comment"># clears the screen; print() does not do so</span><br/>
+                {'    '}sys.stdout.write(<br/>
                 {'        '}<span className="string">'<span className="escaped">\r</span>'</span><br/>
                 {'        '}<span className="functionName">+</span> <span className="string">f"{'{'}<span className="formattedString">f(now.hour)</span>{'}'}:{'{'}<span className="formattedString">f(now.minute)</span>{'}'}:{'{'}<span className="formattedString">f(now.second)</span>{'}'}"</span><br/>
-                {'          '}<span className="string">f" 周{'{'}<span className="formattedString">'一二三四五六日' <span className="functionName">[</span>now.weekday()<span className="functionName">]</span></span>}, {'{'}<span className="formattedString">now.date()</span>{'}'}"</span><br/>
+                {'          '}<span className="string">f" 周{'{'}<span className="formattedString">'一二三四五六日' <span className="functionName">[</span>now.weekday()<span className="functionName">]</span></span>} {'{'}<span className="formattedString">now.date()</span>{'}'}"</span><br/>
                 {'    '})<br/>{'\n'}{/*Empty line at the end of file is very important! (it's actually a space)*/}
             </pre>
         )
