@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {LogoBanner, PageRedirectButton} from '../Common';
 import '../commonStyle.css';
+import SnippetsWall from "../snippets/snippet";
+import DummyComponent from "../snippets/dummy";
 
 
 export default class About extends Component {
@@ -10,10 +12,11 @@ export default class About extends Component {
                 <LogoBanner/>
                 <hr className="bigSpacer"/>
                 <div id="content">
-                    Here's what we plan on doing.
+                    <h3>About <b>us:</b></h3>
                     <br/>
-                    blablablabla
+                    <SnippetsWall snippetsList={[DummyComponent]}/>
                     <br/>
+                    <h3>About <b>you:</b></h3>
                     If you're still interested, its time for the
                     <PageRedirectButton buttonText="Registration form" redirectLink="/registration"/>
 

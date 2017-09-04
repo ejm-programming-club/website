@@ -10,9 +10,7 @@ export default class Homepage extends Component {
                 <hr className="bigSpacer"/>
                 <div id="content">
                     Welcome to the EJM programming club homepage !
-                    <br/>
-                    Interested in joining ?
-                    <PageRedirectButton buttonText="See what we've got planned" redirectLink="/about"/>
+                    <PageRedirectButton buttonText="Learn more >" redirectLink="/about"/>
                 </div>
             </div>
         )
