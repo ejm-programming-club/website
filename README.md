@@ -1,6 +1,6 @@
 # EJM Programming Club
 
-![logo](../src/imgs/logo-banner.png)
+![logo](imgs/logo-banner.png)
 
 ## Website
 - [github page](https://ejm-programming-club.github.io/)
