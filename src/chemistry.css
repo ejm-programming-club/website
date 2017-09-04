@@ -1,0 +1,64 @@
+#root {
+    width: 256px;
+}
+
+#errorMessages {
+    padding: 10px;
+    margin: 10px;
+    /*color: whitesmoke;*/
+    font-family: Courier, sans-serif;
+    font-size: 10px;
+    /*list-style: none;*/
+}
+
+#errorMessages > .errorMessage {
+    background: #ff9d93;
+}
+
+#errorMessages > .warningMessage {
+    background: #ffd58d;
+}
+
+.number {
+    font-family: Courier, cursive;
+    color: red;
+}
+
+#chemistryInput {
+    width: calc(100% - 20px);
+    font-size: 20px;
+    font-family: Chalkboard, sans-serif;
+    text-align: center;
+    height: 40px;
+    border: 2px solid lightgray;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#chemistryInput:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    outline: 0;
+    border-color: #66Afe9;
+}
+
+#chemistryInput.ok {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #9be588 !important;
+    border-color: #2f891a;
+}
+
+#chemistryInput.warning {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #e4b56a !important;
+    border-color: #895f07 !important;
+}
+
+#chemistryInput.error {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483 !important;
+    border-color: #843534 !important;
+}
+
+#result {
+    font-family: "American Typewriter", sans-serif;
+    text-align: center;
+}
