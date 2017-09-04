@@ -1,0 +1,53 @@
+.code {
+    line-height: 1;
+    font-size: 8px;
+    text-align: left;
+    font-family: monospace;
+    background-color: #404040;
+    color: #9BC28E;
+    border-left: 5px;
+}
+
+.terminal {
+    border: 5px;
+    color: white;
+    background-color: black;
+    font-family: monospace;
+}
+
+.lineNumber {
+}
+
+.comment {
+    color: #B3524C;
+}
+
+.keyWord {
+    color: #CA9E4D;
+}
+
+.param {
+    color: #68A8BE;
+}
+
+.builtIn {
+    color: #00CCCC;
+}
+
+
+.functionName {
+    color: #FFFFFF;
+}
+
+.escaped {
+    color: #00FF00;
+}
+
+.string {
+    color: #00B540;
+}
+
+.formattedString {
+    background: #284E28;
+    color: #9BC28E;
+}

@@ -6,7 +6,11 @@ import LogoBannerImg from './imgs/logo-banner.png';
 
 export class LogoBanner extends Component {
     render() {
-        return <img src={LogoBannerImg} alt="Logo banner"/>
+        return (
+            <div>
+                <img src={LogoBannerImg} alt="Logo banner"/>
+            </div>
+        )
     }
 }
 

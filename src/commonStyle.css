@@ -68,5 +68,10 @@ form + button {
     margin: 0 !important;
 }
 
+#prologin {
+    transition: transform 2s ease-in-out
+}
 
-
+#prologin:hover {
+    transform: rotate(360deg)
+}
