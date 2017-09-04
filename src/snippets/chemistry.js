@@ -350,7 +350,7 @@ class ChemicalEquationBalancer extends Component {
                 let coefficients = new Matrix(elements).getNullSpace();
                 let coefficientsInteger;
                 if (coefficients.length > 1) {
-                    warningMessages.push(`Equation ${this.state.inputText} can be balanced in infinitely many ways, `
+                    warningMessages.push(`Equation ${equationFormula} can be balanced in infinitely many ways, `
                         + `because it consists of two or more different equations, `
                         + `or contains immutable group(s).`)
                 }
@@ -370,7 +370,7 @@ class ChemicalEquationBalancer extends Component {
                     if (coefficientsInteger.some(coefficient => coefficient === 0))
                         warningMessages.push("One or more reactants / products did not participate in the reaction.");
                 } else {
-                    warningMessages.push(`Equation ${this.state.inputText} cannot be balanced.`);
+                    warningMessages.push(`Equation ${equationFormula} cannot be balanced.`);
                     coefficientsInteger = new Array(reactants.length + products.length).fill(0);
                 }
                 balancedEquation = [];
