@@ -34,7 +34,7 @@ export class PageRedirectButton extends Component {
     }
 }
 
-PageRedirectButton.PropTypes = {
+PageRedirectButton.propTypes = {
     buttonText: PropTypes.string,
     redirectLink: PropTypes.string
 };

@@ -216,7 +216,7 @@ class ChemicalEquationBalancer extends Component {
                 <a href="https://chemaths.herokuapp.com">https://chemaths.herokuapp.com.</a>);
         }
 
-        if (equationFormulaWithoutWhitespace.match(/[()\[\]]/g)) {
+        if (equationFormulaWithoutWhitespace.match(/[()[\]]/g)) {
             errorMessages.push("(Nested) parentheses are not supported here. Please go on" +
                 <a href="https://chemaths.herokuapp.com">https://chemaths.herokuapp.com.</a>);
         }
@@ -426,7 +426,7 @@ class ChemicalEquationBalancer extends Component {
 }
 
 
-ChemicalEquationBalancer.PropTypes = {
+ChemicalEquationBalancer.propTypes = {
     defaultText: PropTypes.string.isRequired,
 };
 

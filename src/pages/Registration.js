@@ -97,7 +97,7 @@ class ShortTextInput extends Component {
     }
 }
 
-ShortTextInput.PropTypes = {
+ShortTextInput.propTypes = {
     labelText: PropTypes.string,
     value: PropTypes.string,
     handleChange: PropTypes.func,
@@ -123,7 +123,7 @@ class RadioGroupInput extends Component {
     }
 }
 
-RadioGroupInput.PropTypes = {
+RadioGroupInput.propTypes = {
     radioTitle: PropTypes.string,
     valueObj: PropTypes.object,
     handleChange: PropTypes.func,
@@ -137,6 +137,6 @@ class SubmitAndRedirectButton extends PageRedirectButton {
     }
 }
 
-SubmitAndRedirectButton.PropTypes=  {
+SubmitAndRedirectButton.propTypes=  {
     formValidate: PropTypes.func
 };

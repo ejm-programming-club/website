@@ -8,7 +8,7 @@ class SnippetsWall extends Component {
             <div className="snippetsWrapperWrapper">
                 {this.props.snippetsList.map((Snippet) => (
                     <div className="snippetWrapper">
-                        <Snippet/>
+                        {Snippet}
                     </div>
                 ))}
             </div>
