@@ -7,15 +7,21 @@ body {
     color: #4f4f4f;
     font-family: "Consolas", monospace;
     font-size: 16px;
-    line-height: 3;
+    line-height: 2.5;
 }
 
 #backgroundWrapper {
-    display: inline-block;
+    display: inline-flex;
     margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
+    flex-direction: column;
 }
+
+#backgroundWrapper > * {
+    align-self: center;
+}
+
 
 .bigSpacer {
     margin: 40px 0;
@@ -25,10 +31,12 @@ body {
     display: flex;
     text-align: center;
     flex-direction: column;
+    padding: 5px;
+    max-width: 50vw;
 }
 
 hr {
-    width: 100%;
+    width: 382px;
 }
 
 .startTour {
@@ -66,6 +74,20 @@ input[type=text] {
 form + button {
     width: 100%;
     margin: 0 !important;
+}
+
+.success {
+    border: 1px solid forestgreen;
+    color: forestgreen;
+    padding: 10px;
+}
+
+.errorBox {
+    border: 2px solid #ff553c;
+    border-radius: 1px;
+    color: darkred;
+    padding: 10px;
+    font-size: 14px;
 }
 
 #prologin {

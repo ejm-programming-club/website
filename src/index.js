@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import Homepage from './pages/Home';
 import About from './pages/About';
 import Registration from './pages/Registration';
+import Preparation from './pages/Preparation';
+import Success from './pages/Success';
 import './commonStyle.css';
 
 
@@ -17,6 +19,8 @@ class App extends Component {
                     <Route exact path="/" component={Homepage}/>
                     <Route path="/about" component={About}/>
                     <Route path="/registration" component={Registration}/>
+                    <Route path="/preparation" component={Preparation}/>
+                    <Route path="/success" component={Success}/>
                 </div>
             </Router>
         )

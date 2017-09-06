@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {LogoBanner, PageRedirectButton} from "../Common";
 import '../commonStyle.css';
@@ -23,32 +24,66 @@ class RegistrationForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            grade: '',
-            email: '',
-            programmingXp: '',
-            whichProgrammingXp: '',
-            likeToLearn: ''
+            data: {
+                name: '',
+                grade: '',
+                email: '',
+                programmingXp: '',
+                whichProgrammingXp: '',
+                likeToLearn: '',
+            },
+            errorMsg: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(stateKey, value) {
-        this.setState({[stateKey]: value});
+        this.setState({data:{...this.state.data, [stateKey]: value}})
     }
 
     handleSubmit() {
+        this.setState({errorMsg: ''});
+        let isGood = true;
+        for (let key in this.state.data) {
+            if (this.state.data.hasOwnProperty(key)) {
+                if (this.state.data[key] === '' && key !== 'whichProgrammingXp') {
+                    console.log('ERROR', key);
+                    this.setState({errorMsg: key});
+                    isGood = false;
+                    break;
+                }
+            }
+        }
+        if (!isGood) {
+            return;
+        }
+
+
         let link = "https://script.google.com/macros/s/AKfycbzohCWaaFWOp6nj-UOs5EkSlJAODUyOyn_Oe82xNMkqo1oN3nJ5/exec";
-        fetch(link, {method: 'POST', mode: 'no-cors', body: this.state})
-            .then((response) => console.log(response))
+        let searchParams = Object.keys(this.state.data).map((key) => {
+            return encodeURIComponent(key) + '=' + encodeURIComponent(this.state.data[key]);
+        }).join('&'); // must convert to urlencoded
+
+        console.log(searchParams);
+        fetch(link, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: searchParams
+        }).then(() => {
+            console.log(this.state);
+            if (this.state.errorMsg === '') {
+                this.setState({redirect: true})
+            }
+        })
     }
 
     valueObjFactory(arr, stateKey) {
         let o = {};
-        arr.map(grade =>
-            o[grade] = this.state[stateKey] === grade
-        );
+        arr.map(grade => o[grade] = this.state.data[stateKey] === grade);
         return o
     }
 
@@ -56,31 +91,39 @@ class RegistrationForm extends Component {
         let classValueObj = this.valueObjFactory(['2nde', '1ere', 'Terminale'], 'grade');
         let xpValueObj = this.valueObjFactory(['Yes', 'No'], 'programmingXp');
 
-        return (
-            <div>
-                <form id="form" onSubmit={this.handleSubmit}>
-                    <div id="formTitle">Registration Form</div>
-                    <ShortTextInput labelText="Full name" value={this.state.name}
-                                    handleChange={this.handleChange} stateKey="name"/>
+        if (this.state.redirect) {
+            return <Redirect push to="/success" />
+        } else {
+            return (
+                <div>
+                    {this.state.errorMsg !== ''
+                        ? <div className="errorBox">Check that you have filled the '{this.state.errorMsg}' entry and try again.</div>
+                        : null
+                    }
+                    <form id="form" onSubmit={this.handleSubmit}>
+                        <div id="formTitle">Registration Form</div>
+                        <ShortTextInput labelText="Full name" value={this.state.data.name}
+                                        handleChange={this.handleChange} stateKey="name"/>
 
-                    <RadioGroupInput radioTitle="Class" valueObj={classValueObj}
-                                     handleChange={this.handleChange} stateKey="grade"/>
+                        <RadioGroupInput radioTitle="Class" valueObj={classValueObj}
+                                         handleChange={this.handleChange} stateKey="grade"/>
 
-                    <ShortTextInput labelText="Email (@ejm.org)" value={this.state.email}
-                                    handleChange={this.handleChange} stateKey="email"/>
+                        <ShortTextInput labelText="Email (@ejm.org)" value={this.state.data.email}
+                                        handleChange={this.handleChange} stateKey="email"/>
 
-                    <RadioGroupInput radioTitle="Do you have any programming experience ?" valueObj={xpValueObj}
-                                     handleChange={this.handleChange} stateKey="programmingXp"/>
+                        <RadioGroupInput radioTitle="Do you have any programming experience ?" valueObj={xpValueObj}
+                                         handleChange={this.handleChange} stateKey="programmingXp"/>
 
-                    <ShortTextInput labelText="If yes, in which language(s) ?" value={this.state.whichProgrammingXp}
-                                    handleChange={this.handleChange} stateKey="whichProgrammingXp"/>
+                        <ShortTextInput labelText="If yes, in which language(s) ?" value={this.state.data.whichProgrammingXp}
+                                        handleChange={this.handleChange} stateKey="whichProgrammingXp"/>
 
-                    <ShortTextInput labelText="What would you like to learn ?" value={this.state.likeToLearn}
-                                    handleChange={this.handleChange} stateKey="likeToLearn"/>
-                </form>
-                <SubmitAndRedirectButton formValidate={this.handleSubmit} buttonText="Submit" redirectLink="/"/>
-            </div>
-        )
+                        <ShortTextInput labelText="What would you like to learn ?" value={this.state.data.likeToLearn}
+                                        handleChange={this.handleChange} stateKey="likeToLearn"/>
+                    </form>
+                    <SubmitAndRedirectButton formValidate={this.handleSubmit} buttonText="Submit" redirectLink="/success"/>
+                </div>
+            )
+        }
     }
 }
 
@@ -133,7 +176,7 @@ RadioGroupInput.propTypes = {
 
 class SubmitAndRedirectButton extends PageRedirectButton {
     handleOnClick() {
-        this.props.formValidate() //.then(this.setState({redirect: true}))
+        this.props.formValidate()
     }
 }
 

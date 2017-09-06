@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import {Redirect} from 'react-router-dom';
 import LogoBannerImg from './imgs/logo-banner.png';
 
 
 export class LogoBanner extends Component {
     render() {
-        return (
-            <div>
-                <img src={LogoBannerImg} alt="Logo banner"/>
-            </div>
-        )
+        return <div><a href='/'><img src={LogoBannerImg} alt="Logo banner"/></a></div>
     }
 }
 
