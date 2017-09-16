@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {LogoBanner, PageRedirectButton} from '../Common';
 import '../commonStyle.css';
 import ChemicalEquationBalancer from "../snippets/chemistry";
-import PythonCodeConsole, {ConsoleClock} from "../snippets/pythonCode";
 
 
 export default class About extends Component {
@@ -16,10 +15,6 @@ export default class About extends Component {
                     <ul>
                         <li>
                             try & learn to code in python;
-                            <div className="snippetWrapper">
-                                <PythonCodeConsole/>
-                                <ConsoleClock/>
-                            </div>
                         </li>
                         <li>
                             national computer science contest
