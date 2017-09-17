@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && node src/publish/pushToMaster.js"
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
     "prop-types": "^15.5.10"
