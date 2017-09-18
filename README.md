@@ -1,6 +1,10 @@
 # EJM Programming Club - Website
 
-![logo](public/imgs/logo-banner.png)
+<p align="center">
+  <img src="public/imgs/logo-banner.png"/>
+</p>
+
+---
 
 You can find what this club is about and the registration form here. 
 
