@@ -1,10 +1,10 @@
-# EJM Programming Club - Website
-
 <p align="center">
   <img src="public/imgs/logo-banner.png"/>
 </p>
 
 ---
+
+# EJM Programming Club - Website
 
 You can find what this club is about and the registration form here. 
 
