@@ -7,7 +7,7 @@ body {
     color: #4f4f4f;
     font-family: "Consolas", monospace;
     font-size: 16px;
-    line-height: 2.5;
+    line-height: 2;
 }
 
 #backgroundWrapper {
@@ -22,21 +22,43 @@ body {
     align-self: center;
 }
 
+@media (max-width: 382px) {
+    #logoBanner {
+        margin: 5vw;
+        width: 90vw;
+    }
 
+    .bigSpacer {
+        margin: 5vw;
+        width: 90vw;
+    }
+
+    .icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* separator */
 .bigSpacer {
     margin: 40px 0;
 }
 
-#content {
+.contentWrapper {
+    text-align: center;
+}
+
+.content {
     display: flex;
     text-align: center;
     flex-direction: column;
     padding: 5px;
     max-width: 50vw;
+    text-wrap: normal;
 }
 
 @media (max-width: 550px) {
-    #content {
+    .content {
         max-width: 85vw;
     }
 
@@ -49,6 +71,13 @@ hr {
     width: 382px;
 }
 
+.important {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* button */
 .startTour {
     display: inline;
     margin: 10px;
@@ -100,6 +129,7 @@ form + button {
     font-size: 14px;
 }
 
+/* prologin */
 #prologin {
     transition: transform 2s ease-in-out
 }

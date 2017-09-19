@@ -11,7 +11,7 @@ export default class Registration extends Component {
             <div id="backgroundWrapper">
                 <LogoBanner/>
                 <hr className="bigSpacer"/>
-                <div id="content">
+                <div className="content">
                     <RegistrationForm/>
                 </div>
             </div>

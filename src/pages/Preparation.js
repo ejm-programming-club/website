@@ -9,7 +9,7 @@ export default class Preparation extends Component {
             <div id="backgroundWrapper">
                 <LogoBanner/>
                 <hr className="bigSpacer"/>
-                <div id="content">
+                <div className="content">
                     All the info (class + time) will be displayed on the front page of the website.
                     If you have any questions, don't hesitate to send us a mail at ejmprogramming@gmail.com.
                     <br/>

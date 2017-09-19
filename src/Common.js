@@ -4,9 +4,21 @@ import {Redirect} from 'react-router-dom';
 import LogoBannerImg from './imgs/logo-banner.png';
 
 
+export class Layout extends Component {
+    render() {
+        return (
+            <div id="backgroundWrapper">
+                <LogoBanner/>
+                {this.props.children}
+                {/*<Footer/>*/}
+            </div>
+        )
+    }
+}
+
 export class LogoBanner extends Component {
     render() {
-        return <div><a href='/'><img src={LogoBannerImg} alt="Logo banner"/></a></div>
+        return <div><a href='/'><img src={LogoBannerImg} alt="Logo banner" id="logoBanner"/></a></div>
     }
 }
 

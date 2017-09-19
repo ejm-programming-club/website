@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
-import {LogoBanner, PageRedirectButton} from '../Common.js';
+import {PageRedirectButton, Layout} from '../Common.js';
 
 
 export default class Homepage extends Component {
     render() {
         return (
-            <div id="backgroundWrapper">
-                <LogoBanner/>
+            <Layout>
                 <hr className="bigSpacer"/>
-                <div id="content">
+                <div className="content">
                     Welcome to the EJM programming club homepage !
                     <PageRedirectButton buttonText="Learn more >" redirectLink="/about"/>
                 </div>
-            </div>
+                <hr className="bigSpacer"/>
+                <div className="content">
+                    <span className="important">Thursday @ 17h15 (-> 18h45)</span> <br/>
+                    Room: undefined
+                </div>
+            </Layout>
         )
     }
 }

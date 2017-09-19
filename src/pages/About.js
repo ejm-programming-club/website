@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {LogoBanner, PageRedirectButton} from '../Common';
+import {PageRedirectButton, Layout} from '../Common';
 import '../commonStyle.css';
 import ChemicalEquationBalancer from "../snippets/chemistry";
 
@@ -7,46 +7,29 @@ import ChemicalEquationBalancer from "../snippets/chemistry";
 export default class About extends Component {
     render() {
         return (
-            <div id="backgroundWrapper">
-                <LogoBanner/>
+            <Layout>
                 <hr className="bigSpacer"/>
-                <div id="content">
-                    <h3>What <span style={{color: 'dimGrey'}}>you</span> will do:</h3>
-                    <ul>
-                        <li>
-                            try & learn to code in python;
-                        </li>
-                        <li>
-                            national computer science contest
-                            <div className="snippetWrapper">
-                                <a href="https://prologin.org/">
-                                    <img id="prologin"
-                                         src="https://prologin.org/static/img/logo_cube.png"
-                                         alt="prologin logo"/>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            write programs to do your homework
-                            <div className="snippetWrapper">
-                                <ChemicalEquationBalancer defaultText="H2 + O2 -> H2O"/>
-                            </div>
-                        </li>
-                        <li>
-                            web server, web app, web scraping
-                        </li>
-                        <li>
-                            Game making, AI, Machine Learning
-                            <br/>
-                            (as a team, at the end of the year)
-                        </li>
-                    </ul>
+                <div className="content">
+                    Learning python
+                    <a href="https://www.python.org/">
+                        <img src="https://www.python.org/static/opengraph-icon-200x200.png" alt="python logo" height="128px" width="128px" className="icon"/>
+                    </a>
                     <br/>
+                    Algorithms, data structures <br/>preparing national programming contest
+                    <a href="https://prologin.org/">
+                        <img id="prologin" src="https://prologin.org/static/img/logo_cube.png" alt="prologin logo" className="icon"/>
+                    </a>
+                    <br/>
+                    Bigger team projects:<br/> chess bot, website, machine learning, game-making, ...<br/>
+                    or a program to do your homework:
+                    <ChemicalEquationBalancer defaultText={"H2 + O2 -> H2O"}/>
+                </div>
+                <div className="content">
+                    <br/><br/>
                     Interested? Consider signing up:
                     <PageRedirectButton buttonText="Registration form" redirectLink="/registration"/>
-
                 </div>
-            </div>
+            </Layout>
         )
     }
 }

@@ -27,7 +27,7 @@ export default class Success extends Component {
                 <div id="backgroundWrapper">
                     <LogoBanner/>
                     <hr className="bigSpacer"/>
-                    <div id="content" className="success">
+                    <div className="success content">
                         ✔ Form registered successfully !
                         <br/>
                         You'll get redirected in a few seconds ...

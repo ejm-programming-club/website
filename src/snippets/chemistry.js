@@ -416,8 +416,8 @@ class ChemicalEquationBalancer extends Component {
                        disabled={!this.state.done}
                        className={this.state.status}
                        id="chemistryInput"/>
-                <ul id="errorMessages">{this.state.message}</ul>
                 <div id="result">{this.state.result}</div>
+                <ul id="errorMessages">{this.state.message}</ul>
             </div>
         )
     }
