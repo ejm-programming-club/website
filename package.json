@@ -16,9 +16,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy"
+    "deploy": "react-scripts build && firebase deploy"
   },
   "devDependencies": {
     "prop-types": "^15.5.10"
-  }
+  },
+  "homepage": "https://ejm-pc.com"
 }
