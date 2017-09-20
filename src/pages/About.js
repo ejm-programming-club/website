@@ -9,7 +9,7 @@ export default class About extends Component {
         return (
             <Layout>
                 <hr className="bigSpacer"/>
-                <div className="content">
+                <div className="content contentWithFlex">
                     Learning python
                     <a href="https://www.python.org/">
                         <img src="https://www.python.org/static/opengraph-icon-200x200.png" alt="python logo" height="128px" width="128px" className="icon"/>
@@ -24,7 +24,7 @@ export default class About extends Component {
                     or a program to do your homework:
                     <ChemicalEquationBalancer defaultText={"H2 + O2 -> H2O"}/>
                 </div>
-                <div className="content">
+                <div className="content contentWithFlex">
                     <br/><br/>
                     Interested? Consider signing up:
                     <PageRedirectButton buttonText="Registration form" redirectLink="/registration"/>

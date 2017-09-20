@@ -73,12 +73,11 @@ class RegistrationForm extends Component {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
             },
             body: searchParams
-        }).then(() => {
-            console.log(this.state);
-            if (this.state.errorMsg === '') {
-                this.setState({redirect: true})
-            }
-        })
+        });
+
+        if (this.state.errorMsg === '') {
+            this.setState({redirect: true})
+        }
     }
 
     valueObjFactory(arr, stateKey) {

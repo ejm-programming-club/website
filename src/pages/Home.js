@@ -7,9 +7,11 @@ export default class Homepage extends Component {
         return (
             <Layout>
                 <hr className="bigSpacer"/>
-                <div className="content">
+                <div className="content contentWithFlex">
                     Welcome to the EJM programming club homepage !
-                    <PageRedirectButton buttonText="Learn more >" redirectLink="/about"/>
+                    <span className="smallSpacer"/>
+                    <PageRedirectButton buttonText="New ? Learn more >" redirectLink="/about"/>
+                    <PageRedirectButton buttonText="Before first class >" redirectLink="/preparation"/>
                 </div>
                 <hr className="bigSpacer"/>
                 <div className="content">

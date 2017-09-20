@@ -44,17 +44,25 @@ body {
     margin: 40px 0;
 }
 
+.smallSpacer {
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+
 .contentWrapper {
     text-align: center;
 }
 
 .content {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
     padding: 5px;
     max-width: 50vw;
     text-wrap: normal;
+}
+
+.contentWithFlex {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 550px) {
@@ -88,6 +96,7 @@ hr {
     border-radius: 2px;
     font-size: inherit;
     font-family: inherit;
+    box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0) inset, 0 1px 2px 0 #B3B3B3;
 }
 
 /* Form */

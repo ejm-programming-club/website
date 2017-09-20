@@ -10,7 +10,6 @@ export class Layout extends Component {
             <div id="backgroundWrapper">
                 <LogoBanner/>
                 {this.props.children}
-                {/*<Footer/>*/}
             </div>
         )
     }
