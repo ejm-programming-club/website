@@ -263,7 +263,7 @@ class ChemicalEquationBalancer extends Component {
                             elements[element].push(new Fraction(0))
                         }
                         if (elements[element].length > index) {
-                            elements[element][elements[element].length - 1] = elements[element][elements[element].length - 1].addFraction(new Fraction(-parseInt(coefficient, 10)))
+                            elements[element][elements[element].length - 1] = elements[element][elements[element].length - 1].addFraction(new Fraction(parseInt(coefficient, 10)))
                         } else {
                             elements[element].push(new Fraction(parseInt(coefficient, 10)))
                         }
