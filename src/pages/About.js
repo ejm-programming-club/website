@@ -10,6 +10,7 @@ export default class About extends Component {
             <Layout>
                 <hr className="bigSpacer"/>
                 <div className="content contentWithFlex">
+                    <h3>What we'll be doing:</h3>
                     Learning python
                     <a href="https://www.python.org/">
                         <img src="https://www.python.org/static/opengraph-icon-200x200.png" alt="python logo" height="128px" width="128px" className="icon"/>
