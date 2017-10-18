@@ -15,8 +15,9 @@ export default class Homepage extends Component {
                 </div>
                 <hr className="bigSpacer"/>
                 <div className="content">
-                    <span className="important">Thursday @ 17h15 (-> 18h45)</span> <br/>
-                    Room: undefined
+                    <span className="important">Thursday @ 17h15 (-> 18h45)</span><br/>
+                    Room: <span className="important">I3</span><br/>
+                    First meeting: <span className="important">9 November</span>
                 </div>
             </Layout>
         )

@@ -11,7 +11,7 @@ export default class Preparation extends Component {
                 <hr className="bigSpacer"/>
                 <div className="content">
                     All the info (class + time) will be displayed on the front page of the website. <br/>
-                    If you have any questions, don't hesitate to send us a mail at ejmprogrammingclub@gmail.com <br/>
+                    If you have any questions, don't hesitate to send us a mail at <span className="success">ejmprogrammingclub@gmail.com</span> <br/>
                     <span className="smallSpacer"/>
                     <b>Computer required</b>
                     <span className="smallSpacer"/>

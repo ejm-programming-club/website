@@ -111,17 +111,17 @@ class Matrix {
 
         let i = 0, j = 0;
         let pivots = [];
-        const zero = new Fraction(0);
+        const ZERO = new Fraction(0);
 
         // Forward elimination
         while (i < height && j < width) {
             let pivot;
 
-            if (!augmentedTransposeMatrix.matrix[i][j].equals(zero))
+            if (!augmentedTransposeMatrix.matrix[i][j].equals(ZERO))
                 pivot = augmentedTransposeMatrix.matrix[i][j];
             else
                 for (let k = i + 1; k < height; k++) {
-                    if (!augmentedTransposeMatrix.matrix[k][j].equals(zero)) {
+                    if (!augmentedTransposeMatrix.matrix[k][j].equals(ZERO)) {
                         pivot = augmentedTransposeMatrix.matrix[k][j];
                         augmentedTransposeMatrix.exchangeRows(k, i);
                         break
