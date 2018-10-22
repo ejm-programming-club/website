@@ -74,6 +74,7 @@ class RegistrationForm extends Component {
             },
             body: searchParams
         });
+        alert("Failed to submit; Send an email to ejmprogrammingclub@gmail.com instead.");
 
         if (this.state.errorMsg === '') {
             this.setState({redirect: true})
