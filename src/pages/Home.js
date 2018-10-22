@@ -15,9 +15,9 @@ export default class Homepage extends Component {
                 </div>
                 <hr className="bigSpacer"/>
                 <div className="content">
-                    <span className="important">Thursday @ 17h15 (-> 18h45)</span><br/>
+                    <span className="important">Wednesday @ 16h25 (-> ~18h00)</span><br/>
                     Room: <span className="important">I3</span><br/>
-                    First meeting: <span className="important">09-11-2017</span>
+                    <a className="important" href="https://github.com/ejm-programming-club/ProloginNotes">Archive</a>
                 </div>
             </Layout>
         )

@@ -15,7 +15,7 @@ export default class Preparation extends Component {
                     <span className="smallSpacer"/>
                     <b>Computer required</b>
                     <span className="smallSpacer"/>
-                    Before you come, follow the instructions <a href="https://www.python.org/downloads/" style={{display: "inline-block"}}>here</a> to download python <b>3.6.2</b>
+                    Before you come, follow the instructions <a href="https://www.python.org/downloads/" style={{display: "inline-block"}}>here</a> to download python <b>3.7.1</b>
                 </div>
             </div>
         )

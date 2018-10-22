@@ -9,7 +9,7 @@
 You can find what this club is about and the registration form here. 
 
 ## Website
-- [ejm-pc.com](https://ejm-pc.com/)
+- https://ejm-programming-club-1.firebaseapp.com
 
 ## Tech Stack
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
